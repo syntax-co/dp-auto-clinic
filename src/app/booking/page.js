@@ -103,7 +103,7 @@ export default function BookingPage() {
               <CheckCircle2 className="mx-auto mb-4 h-12 w-12 text-primary" />
               <h1 className="text-2xl font-semibold">Request Received</h1>
               <p className="mt-2 text-muted-foreground">
-                {`Thanks ${fname}! We'll confirm your ${service.name.toLowerCase()} on ${date ? format(date, "EEE, MMM d") : "your date"} at ${time}.`}
+                {`Thanks ${fname}! We&aposll confirm your ${service.name.toLowerCase()} on ${date ? format(date, "EEE, MMM d") : "your date"} at ${time}.`}
                 {` Expect a ${contactMethod === "text" ? "text message" : contactMethod} shortly.`}
               </p>
               <div className="mt-6 grid gap-2 text-sm text-muted-foreground">
@@ -310,7 +310,7 @@ export default function BookingPage() {
             <CardContent className="grid gap-2 text-sm text-muted-foreground">
               <div className="flex items-center gap-2"><MapPin className="h-4 w-4" /> {SHOP.address}</div>
               <div className="flex items-center gap-2"><Phone className="h-4 w-4" /> {SHOP.phone}</div>
-              <div className="flex items-center gap-2"><Clock className="h-4 w-4" /> Mon–Sat: 8:00a–6:00p</div>
+              <div className="flex items-center gap-2"><Clock className="h-4 w-4" /> Mon-Sat: 8:00a-6:00p</div>
             </CardContent>
           </Card>
         </aside>
