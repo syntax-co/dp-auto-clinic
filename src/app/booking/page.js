@@ -103,7 +103,7 @@ export default function BookingPage() {
               <CheckCircle2 className="mx-auto mb-4 h-12 w-12 text-primary" />
               <h1 className="text-2xl font-semibold">Request Received</h1>
               <p className="mt-2 text-muted-foreground">
-                {`Thanks ${fname}! We&aposll confirm your ${service.name.toLowerCase()} on ${date ? format(date, "EEE, MMM d") : "your date"} at ${time}.`}
+                {`Thanks ${fname}! We&apos;ll confirm your ${service.name.toLowerCase()} on ${date ? format(date, "EEE, MMM d") : "your date"} at ${time}.`}
                 {` Expect a ${contactMethod === "text" ? "text message" : contactMethod} shortly.`}
               </p>
               <div className="mt-6 grid gap-2 text-sm text-muted-foreground">
@@ -134,7 +134,7 @@ export default function BookingPage() {
         {/* Left: Form */}
         <section>
           <h1 className="text-3xl font-bold tracking-tight">Book an Appointment</h1>
-          <p className="mt-2 text-muted-foreground">Choose a service, pick a time, and tell us about your vehicle. We'll confirm ASAP.</p>
+          <p className="mt-2 text-muted-foreground">Choose a service, pick a time, and tell us about your vehicle. We&apos;ll confirm ASAP.</p>
 
           <form onSubmit={handleSubmit} className="mt-8 grid gap-8">
             <Card>
