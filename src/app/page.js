@@ -22,6 +22,8 @@ import PageHeader from "@/components/navbar/header";
 import { useState } from "react";
 import { useEffect } from "react";
 
+
+
 export default function LandingPage() {
 
   const[mapUrl,setMapUrl] = useState('')
@@ -57,8 +59,14 @@ export default function LandingPage() {
           backgroundImage: "url('/images/tire-change.jpg')",
         }}
       >
-        {/* overlay: a bit stronger on mobile for readability */}
-        <div className="absolute inset-0 bg-black/50 sm:bg-black/40" />
+        <div className='w-full h-full absolute'
+        >
+          <img className='w-full h-full'
+          src='/images/tire-change.jpg'
+          />
+          {/* overlay: a bit stronger on mobile for readability */}
+          <div className="absolute inset-0 bg-black/50 sm:bg-black/40" />
+        </div>
 
         <div
           className="relative mx-auto grid w-full max-w-7xl items-center gap-8 px-4 py-12
