@@ -56,14 +56,12 @@ export default function LandingPage() {
         className="relative flex items-center border-b bg-center bg-no-repeat bg-cover
                   min-h-[60vh] sm:min-h-[65vh] md:h-[70vh]"
         style={{
-          backgroundImage: "url('images/tire-change.jpg')",
+          backgroundImage: "url('images/tire-change.webp')",
         }}
       >
         <div className='w-full h-full absolute'
         >
-          {/* <img className='w-full h-full'
-          src='/images/tire-change.jpg'
-          /> */}
+          
           {/* overlay: a bit stronger on mobile for readability */}
           <div className="absolute inset-0 bg-black/50 sm:bg-black/40" />
         </div>

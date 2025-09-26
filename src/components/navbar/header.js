@@ -29,8 +29,11 @@ const PageHeader = () => {
         <header className="sticky top-0 z-40 w-full border-b bg-background/70 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
             <Link href="/" className="flex items-center gap-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Wrench className="h-5 w-5 text-[#eaeff5]" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground
+                p-1">
+                    <img 
+                    src='/images/icon.png'
+                    />
                 </div>
                 <span className="text-lg font-semibold tracking-tight">Des Plaines Auto Clinic</span>
             </Link>
