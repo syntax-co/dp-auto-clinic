@@ -56,7 +56,7 @@ export default function LandingPage() {
         className="relative flex items-center border-b bg-center bg-no-repeat bg-cover
                   min-h-[60vh] sm:min-h-[65vh] md:h-[70vh]"
         style={{
-          backgroundImage: "url('/images/tire-change.jpg')",
+          backgroundImage: "url('images/tire-change.jpg')",
         }}
       >
         <div className='w-full h-full absolute'
