@@ -55,13 +55,7 @@ export const metadata = {
   category: "Automotive",
   authors: [{ name: "Des Plaines Auto Clinic" }],
 
-  // ✅ Prefix icons with BASE_PATH so they resolve on GH Pages project sites
-  icons: {
-    icon: [
-      { url: `${BASE_PATH}/favicon.ico` }
-    ],
-    apple: `${BASE_PATH}/apple-touch-icon.png`,
-  },
+ 
 };
 
 export default function RootLayout({ children }) {

@@ -1,4 +1,4 @@
-// next.config.mjs (ESM)
+// ESM: next.config.mjs  (or use .cjs with module.exports)
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 /** @type {import('next').NextConfig} */
