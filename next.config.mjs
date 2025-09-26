@@ -1,9 +1,12 @@
-// next.config.js
+// next.config.mjs (ESM)
 const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-module.exports = {
-  output: "export",           // needed for GH Pages
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
   images: { unoptimized: true },
-  basePath: base,             // "" or "/auto-shop"
-  assetPrefix: base,          // "" or "/auto-shop"
+  basePath: base,
+  assetPrefix: base,
 };
+
+export default nextConfig;
