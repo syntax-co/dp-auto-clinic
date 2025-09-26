@@ -61,9 +61,9 @@ export default function LandingPage() {
       >
         <div className='w-full h-full absolute'
         >
-          <img className='w-full h-full'
+          {/* <img className='w-full h-full'
           src='/images/tire-change.jpg'
-          />
+          /> */}
           {/* overlay: a bit stronger on mobile for readability */}
           <div className="absolute inset-0 bg-black/50 sm:bg-black/40" />
         </div>
