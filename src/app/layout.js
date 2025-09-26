@@ -74,7 +74,7 @@ export const metadata = {
   authors: [{ name: "Des Plaines Auto Clinic" }],
 
   icons: {
-    icon: [{url:"public/favicon.ico"}],
+    icon: "/favicon.ico",
     apple: "apple-touch-icon.png",
   },
 };
