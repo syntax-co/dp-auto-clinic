@@ -32,14 +32,14 @@ const PageHeader = () => {
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground
                 p-1"
                 >
-                    {/* <div className="w-full h-full bg-center"
+                    <div className="w-full h-full bg-center bg-contain"
                     style={{
-                        backgroundImage:'url(/images/icon.png)'
+                        backgroundImage:`url(${process.env.NEXT_PUBLIC_SITE_URL}/icon.png)`
                     }} 
-                    /> */}
-                    <img 
-                    src="/images/icon.png"
                     />
+                    {/* <img 
+                    src={process.env.NEXT_PUBLIC_BASE_PATH+"/icon.png"}
+                    /> */}
                 </div>
                 <span className="text-lg font-semibold tracking-tight">Des Plaines Auto Clinic</span>
             </Link>
