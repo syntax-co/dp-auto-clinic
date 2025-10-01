@@ -17,6 +17,15 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # If you stored env vars under the "github-pages" Environment, uncomment:
+    # environment: github-pages
+    env:
+      # Prefer repo Variables; fall back to Secrets; else compute a default.
+      # BASE PATH
+      NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH != '' && vars.NEXT_PUBLIC_BASE_PATH || (secrets.NEXT_PUBLIC_BASE_PATH != '' && secrets.NEXT_PUBLIC_BASE_PATH || (endsWith(github.event.repository.name, '.github.io') && '' || format('/{0}', github.event.repository.name))) }}
+      # SITE URL
+      NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL != '' && vars.NEXT_PUBLIC_SITE_URL || (secrets.NEXT_PUBLIC_SITE_URL != '' && secrets.NEXT_PUBLIC_SITE_URL || (endsWith(github.event.repository.name, '.github.io') && format('https://{0}', github.repository_owner) || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name))) }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -43,8 +52,6 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-          # If you manage basePath/assetPrefix/images in next.config yourself,
-          # you can remove the next line. It's fine to keep it, too.
           static_site_generator: next
 
       - name: Restore cache
@@ -57,15 +64,12 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.pm.outputs.manager }} ${{ steps.pm.outputs.install }}
 
-      - name: Build (inject env)
-        env:
-          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
-          NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH }}
+      - name: Build (print env for sanity)
         run: |
           echo "BASE_PATH=$NEXT_PUBLIC_BASE_PATH"
           echo "SITE_URL=$NEXT_PUBLIC_SITE_URL"
           ${{ steps.pm.outputs.runner }} next build
-          # DO NOT run `next export` on Next 15 — it's built into `next build` when output: "export"
+          # Next 15 + output:export => out/ is created by next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
