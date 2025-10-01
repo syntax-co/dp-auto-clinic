@@ -23,7 +23,7 @@ const PageHeader = () => {
 
     useEffect(() => {
         getUniversalMapsUrl()
-        console.log(`url(${process.env.NEXT_PUBLIC_SITE_URL}/icon.png)`)
+        console.log(`url(${process.env.NEXT_PUBLIC_BASE_PATH}/icon.png)`)
     }, []);
 
     return (
@@ -35,7 +35,7 @@ const PageHeader = () => {
                 >
                     <div className="w-full h-full bg-center bg-contain"
                     style={{
-                        backgroundImage:`url(${process.env.NEXT_PUBLIC_SITE_URL}/icon.png)`
+                        backgroundImage:`url(${process.env.NEXT_PUBLIC_BASE_PATH}/icon.png)`
                     }} 
                     />
                     {/* <img 
