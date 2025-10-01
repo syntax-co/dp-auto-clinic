@@ -23,6 +23,7 @@ const PageHeader = () => {
 
     useEffect(() => {
         getUniversalMapsUrl()
+        console.log(`url(${process.env.NEXT_PUBLIC_SITE_URL}/icon.png)`)
     }, []);
 
     return (
